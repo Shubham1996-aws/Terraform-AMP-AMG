@@ -10,19 +10,19 @@ resource "aws_grafana_workspace" "example" {
   }
 }
 
-/*resource "aws_grafana_role_association" "grafana-role" {
+resource "aws_grafana_role_association" "grafana-role" {
   role         = var.key_role
   user_ids     = [data.aws_identitystore_user.user.id]
   workspace_id = aws_grafana_workspace.example.id
-}*/
+}
 
-resource "aws_grafana_workspace_saml_configuration" "example" {
+/*resource "aws_grafana_workspace_saml_configuration" "example" {
   editor_role_values = ["admin"]
   idp_metadata_url   = var.idp_url
   workspace_id       = aws_grafana_workspace.example.id
   role_assertion     = "department"
-  admin_role_values  = ["admin"] 
-}
+  admin_role_values  = ["sde"] 
+}*/
 
 resource "aws_grafana_workspace_api_key" "key" {
   key_name        = var.key_name

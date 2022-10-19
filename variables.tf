@@ -13,7 +13,7 @@ variable "account_access_type" {
 
 variable "authentication_providers" {
     type = list(string)
-    default = ["SAML"]
+    default = ["AWS_SSO"]
 }
 
 variable "permission_type" {
