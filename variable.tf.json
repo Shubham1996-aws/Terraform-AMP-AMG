@@ -1,0 +1,9 @@
+{
+    "variable": {
+        "account_id": {
+            "type" : "list",
+            "default": [""]
+        }
+        
+    }
+}
